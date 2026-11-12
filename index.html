@@ -153,6 +153,40 @@
   .surface li{padding:11px 0;border-bottom:1px solid var(--line);font-weight:600;color:var(--deep);display:flex;gap:12px;align-items:baseline}
   .surface li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--gold);transform:translateY(-1px)}
 
+  /* ---------- Fred staging: What We Do additions ---------- */
+  .capacity-note{display:inline-flex;align-items:center;gap:10px;background:var(--goldsoft);border:1px solid var(--line);border-radius:999px;padding:8px 16px 8px 12px;font-weight:700;color:var(--deep);font-size:.97rem;margin:0 0 26px}
+  .capacity-note::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);flex:none}
+  .pillars{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0;padding:0;list-style:none}
+  .pillars li{font-family:"Source Serif 4",Georgia,serif;font-weight:700;color:var(--deep);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:1.02rem}
+  .phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .phase{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px 28px}
+  .phase .when{font-size:.78rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
+  .phase h3{font-size:1.22rem;margin:0 0 10px;color:var(--deep);line-height:1.25}
+  .phase p{margin:0;color:var(--soft)}
+  .program-facts{display:flex;flex-wrap:wrap;gap:0;margin:24px 0 0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+  .program-facts div{flex:1 1 160px;padding:16px 20px;text-align:center}
+  .program-facts div + div{border-left:1px solid var(--line)}
+  .program-facts .big{font-family:"Source Serif 4",Georgia,serif;font-weight:700;color:var(--deep);font-size:1.25rem;line-height:1.2;display:block}
+  .program-facts .small{font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+  .promise{background:var(--goldsoft);border-radius:12px;padding:28px 30px;margin-top:26px}
+  .promise h3{margin:0 0 10px;color:var(--deep);font-size:1.2rem}
+  .promise p{margin:0;color:var(--ink);font-size:1.02rem;line-height:1.65}
+  .curriculum{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:8px}
+  .month{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px 28px;display:flex;flex-direction:column}
+  .month .mnum{font-size:.76rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 6px}
+  .month h3{font-size:1.18rem;line-height:1.3;margin:0 0 8px;color:var(--deep)}
+  .month .theme{font-family:"Source Serif 4",Georgia,serif;font-style:italic;color:var(--river);margin:0 0 12px;font-size:1rem;line-height:1.45}
+  .month .body-text{color:var(--soft);margin:0 0 16px;font-size:.98rem}
+  .month dl{margin:auto 0 0;padding-top:14px;border-top:1px solid var(--line);display:grid;gap:12px}
+  .month dt{font-size:.76rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--deep);margin:0 0 3px}
+  .month dd{margin:0;color:var(--soft);font-size:.96rem;line-height:1.55}
+  .program-note{margin-top:22px;border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--ink);font-size:1.02rem;line-height:1.65;max-width:46rem}
+  @media (max-width:820px){
+    .phase-grid,.curriculum{grid-template-columns:1fr}
+    .program-facts{flex-direction:column}
+    .program-facts div + div{border-left:0;border-top:1px solid var(--line)}
+  }
+
   .heard{background:var(--deep-2);color:#fff;position:relative;overflow:hidden}
   .heard .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3}
   .heard .wrap{position:relative}
@@ -497,7 +531,7 @@
     <div class="wrap">
       <p class="kicker">What We Do</p>
       <h1>Client intelligence, turned into stronger relationships</h1>
-      <p>Two services, one goal: help professional-services firms grow on the strength of the relationships they already have.</p>
+      <p>We help leaders of professional services firms better understand their clients, strengthen relationships, and turn client intelligence into a competitive advantage.</p>
     </div>
   </div>
 
@@ -506,6 +540,7 @@
       <p class="kicker">Service One</p>
       <h2 class="sec">Client Intelligence &amp; Strategic Advisory</h2>
       <p class="intro">Firms run on assumptions about their clients. Big River replaces assumptions with evidence — gathered the only way that produces candor: in personal, one-on-one conversation, conducted by an experienced third party clients will talk to honestly.</p>
+      <p class="capacity-note">Up to 30 key clients</p>
       <div class="why">
         <div class="item"><h3>Essence &amp; Alignment Audits</h3><p>Before we listen to clients, we listen inside the firm — leadership, founders, senior partners, associates, lateral hires, and longtime staff — to understand the firm's purpose, culture, and distinctiveness as its own people see it.</p></div>
         <div class="item"><h3>Strategic Listening</h3><p>Face-to-face interviews with up to 20 key clients across a diverse cross-section of the clientele. Clients speak freely because the conversation is confidential, and because it feels like what it is — a genuine conversation, not research.</p></div>
@@ -532,9 +567,138 @@
         <div class="item"><h3>Relationship planning</h3><p>Focused plans for the clients and industries that matter most to the firm's future — built on what those clients actually said they need.</p></div>
         <div class="item"><h3>Partner coaching</h3><p>Practical, one-on-one coaching for client-facing partners: how to deepen trust, how to have the pricing conversation early, how to turn a satisfied client into a loyal one.</p></div>
         <div class="item"><h3>A fractional Chief Client Listening Officer</h3><p>For firms that want listening built into their leadership, Fred serves as a Fractional Chief Client Listening Officer — a dedicated, unbiased voice of the client at the leadership table, without the cost of a full-time hire.</p></div>
-        <div class="item"><h3>Progress check-ins</h3><p>The six-month follow-up built into every Big River engagement, applied to the relationship plan: what's been done, what's working, what needs attention.</p></div>
+        <div class="item"><h3>Young professionals coaching</h3><p>Practical and engaging training in how to build strong and deep client relationships with insights into how clients think.</p></div>
+        <div class="item"><h3>Progress check-ins</h3><p>The six-month follow up built into every engagement which checks on the relationship plan and on young people's progress in developing expanded client relationships.</p></div>
       </div>
       <p style="margin-top:30px"><a class="btn river" href="#/connect">Talk About Your Firm</a></p>
+    </div>
+  </section>
+
+  <section class="blk" style="padding-top:0">
+    <div class="wrap">
+      <p class="kicker">Our Competitive Edge</p>
+      <h2 class="sec">Going below the surface</h2>
+      <p class="intro" style="max-width:48rem;margin-bottom:0">Big River has an uncanny ability to connect with business leaders and uncover their true thoughts and perceptions. It's just human nature, business leaders are more likely to be candid and frank with an interested experienced third party who is listening to learn. That's why we uncover critical thoughts that the firm would never hear directly from their clients. We help you connect these client insights with the key success areas for your firm including:</p>
+      <ul class="pillars">
+        <li>Loyalty</li>
+        <li>Growth</li>
+        <li>Culture</li>
+        <li>Differentiation</li>
+        <li>Succession</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blk" style="padding-top:0">
+    <div class="wrap">
+      <p class="kicker">How it works</p>
+      <h2 class="sec">The Insights &amp; Implications Process</h2>
+      <p class="intro">A tailored program&hellip;</p>
+      <div class="phase-grid">
+        <article class="phase">
+          <p class="when">Month 1</p>
+          <h3>Internal discovery</h3>
+          <p>Meet in person with firm leadership, relationship partners and other lawyers who serve selected clients; align questions firm priorities and identify potential client participants.</p>
+        </article>
+        <article class="phase">
+          <p class="when">Months 2&ndash;4</p>
+          <h3>Client listening</h3>
+          <p>Fred Moore conducts confidential, conversational, in-person interviews, generally 25&ndash;40 minutes each, at clients' offices. Share urgent relationship concerns promptly with designated firm leadership.</p>
+        </article>
+        <article class="phase">
+          <p class="when">Months 5&ndash;6</p>
+          <h3>Synthesis and action</h3>
+          <p>Analyze patterns, contrasting perspectives and opportunities; deliver a client-informed SWOT and strategic implications which may include young lawyer client relationship training; present findings to leadership and the board, with prioritized recommendations.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" style="padding-top:0">
+    <div class="wrap">
+      <p class="kicker">Training Program</p>
+      <h2 class="sec">The Relationship Advantage Training</h2>
+      <p style="font-family:'Source Serif 4',Georgia,serif;font-size:1.18rem;color:var(--deep);margin:0 0 16px;max-width:44rem">A Six-Month Development Program for the Next Generation of Trusted Advisors.</p>
+      <p class="intro" style="margin-bottom:0">For many of the firms we work with &mdash; deep client relationships is their primary differentiator. Yet they are doing very little to help their younger professionals understand how to build those great relationships. This program will do the job. Importantly, with The Relationship Advantage Training, we are not trying to turn young professionals into better salespeople. We want to turn them into better relationship builders.</p>
+      <div class="program-facts" role="list" aria-label="Program facts">
+        <div role="listitem"><span class="big">6 Months</span><span class="small">Duration</span></div>
+        <div role="listitem"><span class="big">6&ndash;8 Participants</span><span class="small">Per cohort</span></div>
+        <div role="listitem"><span class="big">90 Minutes</span><span class="small">Per session, per month</span></div>
+      </div>
+      <div class="promise">
+        <h3>Program promise</h3>
+        <p>Participants will learn to move beyond being technically capable professionals to becoming trusted advisors who understand their clients as people, develop genuine connections and build relationships that endure. How do you become the kind of professional whom clients genuinely trust, enjoy spending time with, confide in and turn to for advice?</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" style="padding-top:0">
+    <div class="wrap">
+      <p class="kicker">Curriculum</p>
+      <h2 class="sec">The six-month curriculum</h2>
+      <div class="curriculum">
+        <article class="month">
+          <p class="mnum">Month 1</p>
+          <h3>The Relationship Advantage: Why It Matters More Than Ever</h3>
+          <p class="theme">Understanding the value of genuine relationships in the age of AI.</p>
+          <p class="body-text">Explore why technical competence is necessary but not always sufficient, what clients value beyond expertise, and the difference between a service provider and a trusted advisor.</p>
+          <dl>
+            <div><dt>Exercise</dt><dd>Each participant identifies three important professional relationships and assesses their depth of trust and understanding.</dd></div>
+            <div><dt>Between-session challenge</dt><dd>Have one meaningful conversation with a client without making a legal matter the primary subject.</dd></div>
+          </dl>
+        </article>
+        <article class="month">
+          <p class="mnum">Month 2</p>
+          <h3>The Art of Listening: Understand Before You Advise</h3>
+          <p class="theme">Becoming an exceptional listener.</p>
+          <p class="body-text">Learn how to ask open-ended questions, listen without interrupting, recognize what isn't being said, and move beyond the instinct to immediately solve problems.</p>
+          <dl>
+            <div><dt>Exercise</dt><dd>Paired listening interviews, with one participant speaking for five minutes and the other practicing attentive listening and thoughtful follow-up questions.</dd></div>
+            <div><dt>Between-session challenge</dt><dd>Practice a client conversation using curiosity and follow-up questions rather than leading with advice.</dd></div>
+          </dl>
+        </article>
+        <article class="month">
+          <p class="mnum">Month 3</p>
+          <h3>Know the Person, Not Just the Client</h3>
+          <p class="theme">Developing genuine human connections.</p>
+          <p class="body-text">Explore how to understand people's motivations, personal priorities, interests and values, and how to build rapport without being intrusive or artificial.</p>
+          <dl>
+            <div><dt>Exercise</dt><dd>Practice moving from a transactional conversation into a more personal one through natural curiosity.</dd></div>
+            <div><dt>Between-session challenge</dt><dd>Learn three meaningful things about a client or professional contact that you did not previously know.</dd></div>
+          </dl>
+        </article>
+        <article class="month">
+          <p class="mnum">Month 4</p>
+          <h3>From Capable Professional to Trusted Advisor</h3>
+          <p class="theme">How trust is earned, strengthened and sometimes lost.</p>
+          <p class="body-text">Examine reliability, confidentiality, empathy, candor, judgment and the courage to have difficult conversations. Explore why clients often trust the professional who tells them what they need to hear rather than simply what they want to hear.</p>
+          <dl>
+            <div><dt>Exercise</dt><dd>Work through scenarios involving a client mistake, a missed expectation and a difficult recommendation.</dd></div>
+            <div><dt>Between-session challenge</dt><dd>Take one action that demonstrates proactive care for a client's interests without expecting immediate business in return.</dd></div>
+          </dl>
+        </article>
+        <article class="month">
+          <p class="mnum">Month 5</p>
+          <h3>Building Relationships That Last &mdash; Without Sacrificing Your Life</h3>
+          <p class="theme">Making relationship development authentic, sustainable and compatible with work-life balance.</p>
+          <p class="body-text">Discuss why meaningful relationships don't require constant entertaining, endless networking events or sacrificing family time. Explore small, consistent actions that communicate genuine interest.</p>
+          <dl>
+            <div><dt>Exercise</dt><dd>Design a personalized relationship-building routine that fits each participant's personality, work responsibilities and life.</dd></div>
+            <div><dt>Between-session challenge</dt><dd>Put the routine into practice for 30 days and evaluate which interactions were most meaningful.</dd></div>
+          </dl>
+        </article>
+        <article class="month">
+          <p class="mnum">Month 6</p>
+          <h3>Putting It All Together: Becoming a Relationship Leader</h3>
+          <p class="theme">Turning relationship-building principles into lifelong professional habits.</p>
+          <p class="body-text">Revisit the relationship ladder, discuss what participants learned from real client interactions, identify areas for improvement and create a sustainable personal development plan.</p>
+          <dl>
+            <div><dt>Exercise</dt><dd>Each participant presents a real relationship-development experience, what they learned and what they would do differently.</dd></div>
+            <div><dt>Final deliverable</dt><dd>A personal 12-month Relationship Advantage Plan, with specific behaviors, opportunities for client interaction and measurable commitments.</dd></div>
+          </dl>
+        </article>
+      </div>
+      <p class="program-note">Importantly, every monthly session begins with an updated report: &lsquo;What Clients Are Really Telling Us.&rsquo; This ties the ongoing, firm client listening into relevant and motivating data for participants to always consider.</p>
     </div>
   </section>
 
