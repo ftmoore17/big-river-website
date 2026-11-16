@@ -155,14 +155,13 @@
   .surface li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--gold);transform:translateY(-1px)}
 
   /* ---------- Fred staging: What We Do additions ---------- */
-  /* Focus words — the five key success areas as a plain typographic row (homepage) */
-  .focus-words{list-style:none;margin:36px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px 24px;text-align:center}
-  .focus-words li{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:clamp(1.65rem,3.4vw,2.35rem);line-height:1.15;color:var(--deep);white-space:nowrap}
-  .focus-words li:not(:last-child)::after{content:"";display:inline-block;width:7px;height:7px;margin-left:24px;background:var(--gold);transform:rotate(45deg) translateY(-3px)}
+  /* Focus words — the five key success areas, stacked in the right column under the lede paragraph, beside the photo */
+  .focus-words{list-style:none;margin:22px 0 0;padding:20px 0 0;border-top:1px solid var(--line);display:flex;flex-direction:column;align-items:flex-start;gap:8px;text-align:left}
+  .focus-words li{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:clamp(1.45rem,2.4vw,1.8rem);line-height:1.2;color:var(--deep);display:flex;align-items:center;gap:14px}
+  .focus-words li::before{content:"";flex:none;width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
   @media (max-width:640px){
-    .focus-words{gap:12px 18px;margin-top:30px}
-    .focus-words li{font-size:1.55rem}
-    .focus-words li:not(:last-child)::after{margin-left:18px}
+    .focus-words{gap:7px;margin-top:20px;padding-top:18px}
+    .focus-words li{font-size:1.4rem}
   }
   .phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .phase{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px 28px}
@@ -431,15 +430,15 @@
           <p class="kicker">Our Competitive Edge</p>
           <h2 class="sec">Going below the surface</h2>
           <p class="lede">Big River has an uncanny ability to connect with business leaders and uncover their true thoughts and perceptions. It's just human nature, business leaders are more likely to be candid and frank with an interested experienced third party who is listening to learn. That's why we uncover critical thoughts that the firm would never hear directly from their clients. We help you connect these client insights with the key success areas for your firm including:</p>
+          <ul class="focus-words" aria-label="The key success areas for your firm">
+            <li>Loyalty</li>
+            <li>Growth</li>
+            <li>Culture</li>
+            <li>Differentiation</li>
+            <li>Succession</li>
+          </ul>
         </div>
       </div>
-      <ul class="focus-words" aria-label="The key success areas for your firm">
-        <li>Loyalty</li>
-        <li>Growth</li>
-        <li>Culture</li>
-        <li>Differentiation</li>
-        <li>Succession</li>
-      </ul>
     </div>
   </section>
 
