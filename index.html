@@ -92,6 +92,7 @@
 
   /* ---------- Shared blocks ---------- */
   section.blk{padding:64px 0}
+  #development-coaching{scroll-margin-top:92px}
   .kicker{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.76rem;color:var(--gold);margin:0 0 10px}
   h2.sec{font-size:clamp(1.6rem,3.4vw,2.25rem);line-height:1.18;margin:0 0 14px;color:var(--deep)}
   .intro{color:var(--soft);max-width:44rem;margin:0 0 30px;font-size:1.05rem}
@@ -154,8 +155,14 @@
   .surface li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--gold);transform:translateY(-1px)}
 
   /* ---------- Fred staging: What We Do additions ---------- */
-  .pillars{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0;padding:0;list-style:none}
-  .pillars li{font-family:"Source Serif 4",Georgia,serif;font-weight:700;color:var(--deep);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:1.02rem}
+  .focus-words{list-style:none;margin:28px 0 0;padding:0;border-top:2px solid var(--gold)}
+  .focus-words li{display:flex;align-items:baseline;gap:20px;padding:15px 2px;border-bottom:1px solid var(--line)}
+  .focus-words .fw-num{font-family:"Source Serif 4",Georgia,serif;font-weight:700;color:var(--gold);font-size:1rem;letter-spacing:.06em;flex:none;min-width:2.2em}
+  .focus-words .fw-word{font-family:"Source Serif 4",Georgia,serif;font-weight:700;color:var(--deep);font-size:clamp(1.75rem,3.6vw,2.5rem);line-height:1.1;letter-spacing:.01em}
+  .surface .focus-words{margin-top:24px;border-top-color:var(--gold)}
+  .surface .focus-words li{padding:12px 2px}
+  .surface .focus-words li::before{content:none}
+  .surface .focus-words .fw-word{font-size:clamp(1.55rem,3vw,2.1rem)}
   .phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .phase{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px 28px}
   .phase .when{font-size:.78rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
@@ -400,7 +407,7 @@
             <li><strong>Partner coaching</strong> — practical, one-on-one development for client-facing partners</li>
             <li><strong>Progress check-ins</strong> — the six-month follow-up built into every engagement, applied to the relationship plan</li>
           </ul>
-          <p class="more"><a href="#/what-we-do">More on Development &amp; Coaching →</a></p>
+          <p class="more"><a href="#/what-we-do/development-coaching">More on Development &amp; Coaching →</a></p>
         </article>
       </div>
     </div>
@@ -415,13 +422,14 @@
         <div>
           <p class="kicker">Our Competitive Edge</p>
           <h2 class="sec">Going below the surface</h2>
-          <p class="lede">Surveys skim the surface. Big River goes underneath it — into the perceptions, loyalties, and quiet frustrations that clients rarely put in writing but will share in a real conversation. That is where a firm's true position lives, and what going below the surface returns:</p>
-          <ul>
-            <li>Meaningful and true competitive differentiation</li>
-            <li>Unified and focused internal culture</li>
-            <li>Deeper client loyalty</li>
-            <li>Rediscovery and clarity of the firm's “True North”</li>
-          </ul>
+          <p class="lede">Big River has an uncanny ability to connect with business leaders and uncover their true thoughts and perceptions. It's just human nature, business leaders are more likely to be candid and frank with an interested experienced third party who is listening to learn. That's why we uncover critical thoughts that the firm would never hear directly from their clients. We help you connect these client insights with the key success areas for your firm including:</p>
+          <ol class="focus-words" aria-label="The key success areas for your firm">
+            <li><span class="fw-num" aria-hidden="true">01</span><span class="fw-word">Loyalty</span></li>
+            <li><span class="fw-num" aria-hidden="true">02</span><span class="fw-word">Growth</span></li>
+            <li><span class="fw-num" aria-hidden="true">03</span><span class="fw-word">Culture</span></li>
+            <li><span class="fw-num" aria-hidden="true">04</span><span class="fw-word">Differentiation</span></li>
+            <li><span class="fw-num" aria-hidden="true">05</span><span class="fw-word">Succession</span></li>
+          </ol>
         </div>
       </div>
     </div>
@@ -555,7 +563,7 @@
     </div>
   </section>
 
-  <section class="blk">
+  <section class="blk" id="development-coaching">
     <div class="wrap">
       <p class="kicker">Service Two</p>
       <h2 class="sec">Client Relationship Development &amp; Coaching</h2>
@@ -576,13 +584,13 @@
       <p class="kicker">Our Competitive Edge</p>
       <h2 class="sec">Going below the surface</h2>
       <p class="intro" style="max-width:48rem;margin-bottom:0">Big River has an uncanny ability to connect with business leaders and uncover their true thoughts and perceptions. It's just human nature, business leaders are more likely to be candid and frank with an interested experienced third party who is listening to learn. That's why we uncover critical thoughts that the firm would never hear directly from their clients. We help you connect these client insights with the key success areas for your firm including:</p>
-      <ul class="pillars">
-        <li>Loyalty</li>
-        <li>Growth</li>
-        <li>Culture</li>
-        <li>Differentiation</li>
-        <li>Succession</li>
-      </ul>
+      <ol class="focus-words" aria-label="The key success areas for your firm">
+        <li><span class="fw-num" aria-hidden="true">01</span><span class="fw-word">Loyalty</span></li>
+        <li><span class="fw-num" aria-hidden="true">02</span><span class="fw-word">Growth</span></li>
+        <li><span class="fw-num" aria-hidden="true">03</span><span class="fw-word">Culture</span></li>
+        <li><span class="fw-num" aria-hidden="true">04</span><span class="fw-word">Differentiation</span></li>
+        <li><span class="fw-num" aria-hidden="true">05</span><span class="fw-word">Succession</span></li>
+      </ol>
     </div>
   </section>
 
@@ -1305,7 +1313,14 @@
       var links = document.querySelectorAll('[data-nav]');
       for (var j = 0; j < links.length; j++) links[j].classList.toggle('active', links[j].getAttribute('data-nav') === nav);
       document.title = (page.indexOf('article-') === 0) ? articleTitles[page.slice(8)] : titles[page];
-      window.scrollTo(0, 0);
+      var anchor = (page === 'what-we-do' && parts[1]) ? document.getElementById(parts[1]) : null;
+      if (anchor) {
+        var scrollToAnchor = function(){ anchor.scrollIntoView({ block: 'start' }); };
+        if (window.requestAnimationFrame) window.requestAnimationFrame(scrollToAnchor);
+        else scrollToAnchor();
+      } else {
+        window.scrollTo(0, 0);
+      }
     }
     window.addEventListener('hashchange', route);
     route();
