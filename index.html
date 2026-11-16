@@ -155,14 +155,22 @@
   .surface li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--gold);transform:translateY(-1px)}
 
   /* ---------- Fred staging: What We Do additions ---------- */
-  .focus-words{list-style:none;margin:28px 0 0;padding:0;border-top:2px solid var(--gold)}
-  .focus-words li{display:flex;align-items:baseline;gap:20px;padding:15px 2px;border-bottom:1px solid var(--line)}
-  .focus-words .fw-num{font-family:"Source Serif 4",Georgia,serif;font-weight:700;color:var(--gold);font-size:1rem;letter-spacing:.06em;flex:none;min-width:2.2em}
-  .focus-words .fw-word{font-family:"Source Serif 4",Georgia,serif;font-weight:700;color:var(--deep);font-size:clamp(1.75rem,3.6vw,2.5rem);line-height:1.1;letter-spacing:.01em}
-  .surface .focus-words{margin-top:24px;border-top-color:var(--gold)}
-  .surface .focus-words li{padding:12px 2px}
-  .surface .focus-words li::before{content:none}
-  .surface .focus-words .fw-word{font-size:clamp(1.55rem,3vw,2.1rem)}
+  /* Riverbed stones — the five focus words resting on stones in deep water (homepage) */
+  .riverbed{list-style:none;margin:40px 0 0;padding:48px 36px 52px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:26px 6px;border-radius:18px;position:relative;overflow:hidden;background:radial-gradient(130% 100% at 50% 0%,rgba(111,169,204,.22),rgba(111,169,204,0) 58%),linear-gradient(180deg,#17425F 0%,#0E324E 48%,#082136 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),inset 0 -18px 34px rgba(0,0,0,.28)}
+  .riverbed .stone{display:flex;align-items:center;justify-content:center;flex:none;border-radius:50%;text-align:center;position:relative;box-shadow:inset 0 -12px 20px rgba(0,0,0,.30),inset 0 9px 15px rgba(255,255,255,.16),0 12px 24px rgba(0,0,0,.32)}
+  .riverbed .stone span{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:clamp(1.45rem,2.5vw,1.95rem);line-height:1.1;letter-spacing:.01em;color:#F7F2E4;text-shadow:0 1px 10px rgba(0,0,0,.40);padding:0 18px}
+  .riverbed .stone.s1{width:252px;height:106px;background:linear-gradient(155deg,#74838D,#4D5C65);transform:translateY(-8px)}
+  .riverbed .stone.s2{width:224px;height:96px;background:linear-gradient(155deg,#96876F,#6E6046);transform:translateY(14px);margin-left:-10px}
+  .riverbed .stone.s3{width:238px;height:102px;background:linear-gradient(155deg,#7F8471,#5A5E4E);transform:translateY(-3px);margin-left:-8px}
+  .riverbed .stone.s4{width:336px;height:112px;background:linear-gradient(155deg,#687D8E,#43586B);transform:translateY(10px)}
+  .riverbed .stone.s5{width:268px;height:104px;background:linear-gradient(155deg,#8E8474,#665B49);transform:translateY(-6px);margin-left:-10px}
+  @media (max-width:640px){
+    .riverbed{flex-direction:column;flex-wrap:nowrap;gap:16px;padding:38px 20px 42px;margin-top:34px}
+    .riverbed .stone{transform:none;margin-left:0;width:min(100%,330px);height:96px}
+    .riverbed .stone.s4{width:min(100%,352px)}
+    .riverbed .stone span{font-size:1.5rem}
+    .riverbed .stone.s4 span{font-size:1.4rem}
+  }
   .phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .phase{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px 28px}
   .phase .when{font-size:.78rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
@@ -247,6 +255,13 @@
   .card h3{font-size:1.22rem;line-height:1.3;margin:0 0 10px;color:var(--deep)}
   .card p{color:var(--soft);margin:0 0 16px;font-size:.97rem;flex:1}
   .card .read{font-weight:700;color:var(--river)}
+  /* Homepage Perspectives cards: date and body no longer grow (flex:1 on .card p also stretched the date line, pushing each title down by a different amount). Titles now start at the same height and the read link is pinned to the bottom. */
+  #page-home .cards{align-items:stretch}
+  #page-home .card{justify-content:flex-start;height:100%}
+  #page-home .card .date{flex:none}
+  #page-home .card h3{flex:none}
+  #page-home .card p{flex:none}
+  #page-home .card .read{margin-top:auto}
   .article{max-width:46rem;margin:0 auto}
   .article .meta{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
   .article h1{font-size:clamp(1.8rem,4.2vw,2.6rem);line-height:1.15;color:var(--deep);margin:0 0 8px}
@@ -423,15 +438,15 @@
           <p class="kicker">Our Competitive Edge</p>
           <h2 class="sec">Going below the surface</h2>
           <p class="lede">Big River has an uncanny ability to connect with business leaders and uncover their true thoughts and perceptions. It's just human nature, business leaders are more likely to be candid and frank with an interested experienced third party who is listening to learn. That's why we uncover critical thoughts that the firm would never hear directly from their clients. We help you connect these client insights with the key success areas for your firm including:</p>
-          <ol class="focus-words" aria-label="The key success areas for your firm">
-            <li><span class="fw-num" aria-hidden="true">01</span><span class="fw-word">Loyalty</span></li>
-            <li><span class="fw-num" aria-hidden="true">02</span><span class="fw-word">Growth</span></li>
-            <li><span class="fw-num" aria-hidden="true">03</span><span class="fw-word">Culture</span></li>
-            <li><span class="fw-num" aria-hidden="true">04</span><span class="fw-word">Differentiation</span></li>
-            <li><span class="fw-num" aria-hidden="true">05</span><span class="fw-word">Succession</span></li>
-          </ol>
         </div>
       </div>
+      <ul class="riverbed" aria-label="The key success areas for your firm">
+        <li class="stone s1"><span>Loyalty</span></li>
+        <li class="stone s2"><span>Growth</span></li>
+        <li class="stone s3"><span>Culture</span></li>
+        <li class="stone s4"><span>Differentiation</span></li>
+        <li class="stone s5"><span>Succession</span></li>
+      </ul>
     </div>
   </section>
 
@@ -560,21 +575,6 @@
         <div class="item"><h3>Progress check-ins</h3><p>The six-month follow up built into every engagement which checks on the relationship plan and on young people's progress in developing expanded client relationships.</p></div>
       </div>
       <p style="margin-top:30px"><a class="btn river" href="#/connect">Talk About Your Firm</a></p>
-    </div>
-  </section>
-
-  <section class="blk" style="padding-top:0">
-    <div class="wrap">
-      <p class="kicker">Our Competitive Edge</p>
-      <h2 class="sec">Going below the surface</h2>
-      <p class="intro" style="max-width:48rem;margin-bottom:0">Big River has an uncanny ability to connect with business leaders and uncover their true thoughts and perceptions. It's just human nature, business leaders are more likely to be candid and frank with an interested experienced third party who is listening to learn. That's why we uncover critical thoughts that the firm would never hear directly from their clients. We help you connect these client insights with the key success areas for your firm including:</p>
-      <ol class="focus-words" aria-label="The key success areas for your firm">
-        <li><span class="fw-num" aria-hidden="true">01</span><span class="fw-word">Loyalty</span></li>
-        <li><span class="fw-num" aria-hidden="true">02</span><span class="fw-word">Growth</span></li>
-        <li><span class="fw-num" aria-hidden="true">03</span><span class="fw-word">Culture</span></li>
-        <li><span class="fw-num" aria-hidden="true">04</span><span class="fw-word">Differentiation</span></li>
-        <li><span class="fw-num" aria-hidden="true">05</span><span class="fw-word">Succession</span></li>
-      </ol>
     </div>
   </section>
 
