@@ -260,6 +260,13 @@
   .article .signoff{border-top:1px solid var(--line);margin-top:36px;padding-top:20px;color:var(--soft);font-size:.97rem}
   .backlink{font-weight:700;text-decoration:none}
 
+  /* ---------- Client Intelligence Brief ---------- */
+  .article .body p.lede{font-family:"Source Serif 4",Georgia,serif;font-size:1.18rem;line-height:1.55;color:var(--ink)}
+  .brief-contact{border-top:1px solid var(--line);margin-top:38px;padding-top:22px}
+  .brief-contact p{margin:0 0 6px;color:var(--soft)}
+  .brief-contact .bc-name{font-family:"Source Serif 4",Georgia,serif;font-weight:700;color:var(--deep);font-size:1.2rem;margin:0 0 2px}
+  .brief-contact a{font-weight:600}
+
   /* ---------- Newsletter ---------- */
   .newsletter{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:30px 32px}
   .newsletter h3{font-size:1.3rem;color:var(--deep);margin:0 0 8px}
@@ -1137,6 +1144,58 @@
   </section>
 </div>
 
+<!-- ================= CLIENT INTELLIGENCE BRIEF ================= -->
+<div class="page" id="page-client-intelligence-brief">
+  <section class="blk">
+    <div class="wrap">
+      <div class="article">
+        <p class="meta">Client Intelligence Brief</p>
+        <h1>What Can MidLaw Learn from the Weil Ordeal?</h1>
+        <div class="body">
+          <p class="lede"><strong>When a 95-year-old law firm with $2 billion in revenue disappears, every law firm leader should take notice.</strong></p>
+          <p>Wow.</p>
+          <p>How does one of America’s most prominent and successful law firms unravel seemingly overnight?</p>
+          <p>The stunning demise of Weil, Gotshal &amp; Manges, a firm with approximately 1,200 lawyers, should be a wake-up call for law firm leaders everywhere.</p>
+          <p>Especially those leading midsize firms.</p>
+          <p>Yes, I said <em>midsize</em>.</p>
+          <p>Weil was certainly no midsize law firm. But I believe its collapse offers an important lesson—and perhaps a significant opportunity—for firms that have chosen a different path from Big Law.</p>
+          <p>A recent New York Times article examining the Weil ordeal made a striking observation:</p>
+          <blockquote>As lawyers increasingly move between firms in pursuit of greater compensation, <strong>profitability has begun to replace the traditional bonds of partnership as the force holding firms together.</strong></blockquote>
+          <p>Think about that.</p>
+          <p><strong>What happens when making more money becomes more important than what made a law firm great in the first place?</strong></p>
+          <p>Strong relationships. A shared sense of purpose. A distinctive culture. Loyalty to clients and colleagues. Pride in building something that will endure.</p>
+          <p>Don’t get me wrong. Profitability matters. Every successful law firm needs to be financially strong and reward its people appropriately.</p>
+          <p>But I believe there is a real danger when profitability becomes the <em>purpose</em> of a firm rather than the <em>result</em> of doing things exceptionally well.</p>
+          <p>And that’s where I see a tremendous opportunity for MidLaw.</p>
+          <p>Midsize firms don’t have to win the compensation arms race. They can win by being something different. Something clients value. Something lawyers want to be part of.</p>
+          <p>A firm where relationships matter more than transactions.</p>
+          <p>Where clients feel genuinely understood and appreciated.</p>
+          <p>Where lawyers are proud of their colleagues, their culture, and their contributions to the communities they serve.</p>
+          <p>Where leadership is focused not just on this year’s profits, but on building a great institution for the next generation.</p>
+          <p><strong>Perhaps the most important question law firm leaders should be asking today isn’t “How do we become more like Big Law?” but rather “What makes us different—and how do we become even better at it?”</strong></p>
+          <p>I believe answering that question starts with listening.</p>
+          <p>Really listening.</p>
+          <p>Listening to clients about what they value, what concerns them, and how their needs are changing.</p>
+          <p>Listening to younger lawyers about what they want from their careers and what makes them feel connected to their firm.</p>
+          <p>Listening to partners about the kind of institution they want to build together.</p>
+          <p>And then using those insights to reinforce a meaningful vision for the future.</p>
+          <p>This isn’t just about creating a better culture. It’s about creating a stronger business.</p>
+          <p>Because firms that build deeper client relationships, stronger internal bonds, and a clear sense of purpose are better positioned to earn client loyalty, retain talented lawyers, attract the next generation, and achieve sustainable profitability.</p>
+          <p><strong>The lesson from Weil isn’t that making money is bad. It’s that money alone may not be enough to hold a partnership together.</strong></p>
+          <p>For midsize law firms, that may be the greatest opportunity of all.</p>
+          <p>To build firms that are not only successful today, but truly worth being part of tomorrow.</p>
+          <p><strong>And isn’t that what great law firm leadership is all about?</strong></p>
+        </div>
+        <div class="brief-contact">
+          <p class="bc-name">Fred Moore</p>
+          <p>President, Big River Strategic Advisors<br />Richmond, Virginia</p>
+          <p><a href="mailto:fmoore@yourbigriver.com">fmoore@yourbigriver.com</a> &nbsp;·&nbsp; <a href="tel:+18046473151">804-647-3151</a> &nbsp;·&nbsp; <a href="https://bigriversa.com">bigriversa.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!-- ================= LET'S CONNECT ================= -->
 <div class="page" id="page-connect">
   <div class="pagehero">
@@ -1223,7 +1282,8 @@
       'what-we-do': 'What We Do — Big River Strategic Advisors',
       'about': 'About Big River — Big River Strategic Advisors',
       'perspectives': 'Perspectives — Big River Strategic Advisors',
-      'connect': "Let's Connect — Big River Strategic Advisors"
+      'connect': "Let's Connect — Big River Strategic Advisors",
+      'client-intelligence-brief': 'What Can MidLaw Learn from the Weil Ordeal? — Big River Strategic Advisors'
     };
     var articleTitles = {
       'raise-your-rates': 'Raise Your Rates & Keep Clients Happy — Big River Strategic Advisors',
@@ -1268,6 +1328,9 @@
       }
       if (parts[0] === 'perspectives' && parts[1] && articleTitles[parts[1]]) {
         page = 'article-' + parts[1]; nav = 'perspectives';
+      }
+      if (parts[0] === 'client-intelligence-brief') {
+        page = 'client-intelligence-brief'; nav = 'client-intelligence-brief';
       }
       var pages = document.querySelectorAll('.page');
       for (var i = 0; i < pages.length; i++) pages[i].classList.remove('on');
