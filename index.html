@@ -1788,11 +1788,12 @@
       <div class="newsletter">
         <h3>Get Fred's thinking in your inbox</h3>
         <p>The <strong>Client Intelligence Brief</strong> carries Fred's latest perspectives on client intelligence and firm leadership. Tell us where to send it and Fred will add you personally.</p>
-        <form data-newsletter>
-          <input type="email" required placeholder="Your work email" aria-label="Your email address" />
-          <button class="btn river" type="submit">Subscribe by Email</button>
+        <form data-newsletter action="https://bigriveradvertising.us7.list-manage.com/subscribe/post?u=00f132e6c6a44fdc0908eae08&amp;id=44c9e6b2c9&amp;f_id=00d5a0e4f0" method="post" target="_blank">
+          <input type="email" name="EMAIL" required placeholder="Your work email" aria-label="Your email address" />
+          <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_00f132e6c6a44fdc0908eae08_44c9e6b2c9" tabindex="-1" value="" /></div>
+          <button class="btn river" type="submit">Subscribe</button>
         </form>
-        <p class="note">Subscribing opens an email to Fred with your address — no list is kept on this website.</p>
+        <p class="note">Join the Strategic Advisors Newsletter list — unsubscribe anytime.</p>
       </div>
     </div>
   </section>
@@ -1851,11 +1852,12 @@
       <div class="newsletter">
         <h3>Not ready to talk? Stay in the current.</h3>
         <p>Fred writes the <strong>Client Intelligence Brief</strong> on client intelligence and firm leadership — the same thinking you'll find in <a href="#/perspectives">Perspectives</a>, delivered to your inbox. Add yourself by email and Fred will put you on the list personally.</p>
-        <form data-newsletter>
-          <input type="email" required placeholder="Your work email" aria-label="Your email address" />
-          <button class="btn river" type="submit">Subscribe by Email</button>
+        <form data-newsletter action="https://bigriveradvertising.us7.list-manage.com/subscribe/post?u=00f132e6c6a44fdc0908eae08&amp;id=44c9e6b2c9&amp;f_id=00d5a0e4f0" method="post" target="_blank">
+          <input type="email" name="EMAIL" required placeholder="Your work email" aria-label="Your email address" />
+          <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_00f132e6c6a44fdc0908eae08_44c9e6b2c9" tabindex="-1" value="" /></div>
+          <button class="btn river" type="submit">Subscribe</button>
         </form>
-        <p class="note">Subscribing opens an email to Fred with your address — no list is kept on this website.</p>
+        <p class="note">Join the Strategic Advisors Newsletter list — unsubscribe anytime.</p>
       </div>
     </div>
   </section>
@@ -1969,18 +1971,6 @@
     window.addEventListener('hashchange', route);
     route();
 
-    var forms = document.querySelectorAll('form[data-newsletter]');
-    for (var k = 0; k < forms.length; k++) {
-      forms[k].addEventListener('submit', function(ev){
-        ev.preventDefault();
-        var input = this.querySelector('input[type=email]');
-        var addr = input ? input.value.trim() : '';
-        if (!addr) return;
-        var subject = encodeURIComponent('Subscribe — Strategic Advisors Newsletter');
-        var body = encodeURIComponent('Please add me to the Big River Strategic Advisors newsletter list.\n\nMy email: ' + addr);
-        location.href = 'mailto:fmoore@yourbigriver.com?subject=' + subject + '&body=' + body;
-      });
-    }
   })();
 </script>
 </body>
